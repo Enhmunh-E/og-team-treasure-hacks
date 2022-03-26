@@ -10,7 +10,7 @@
   line-height: 28px;
   text-align: center;
 }
-#homeContainer {
+#baseContainer {
   display: flex;
   flex-direction: column;
   align-items: center;

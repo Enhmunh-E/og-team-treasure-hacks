@@ -26,18 +26,6 @@ export const Provider = ({ children }: any) => {
           navigate("/");
         }
       );
-      // axios
-      //   .get(
-      //     `https://maps.googleapis.com/maps/api/place/nearbysearch/json
-      // ?keyword=cruise
-      // &location=47.9096302,106.9060646
-      // &radius=1500
-      // &type=park
-      // &key=AIzaSyACHkOHi-pNVRYF8dRvuvnR-Cl28TgBYL0`
-      //   )
-      //   .then((res) => {
-      //     console.log(res, "lat long");
-      // });
     }
   }, []);
   return <Context.Provider value={{ position }}>{children}</Context.Provider>;
