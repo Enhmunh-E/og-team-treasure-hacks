@@ -28,12 +28,16 @@ const AnyReactComponent = ({ text }: textType) => (
 const SimpleMap = ({ center = { lat: 59.95, lng: 30.33 }, zoom = 11 }) => {
   const { position } = useContext(Context);
   console.log(position);
-  return (
-    // Important! Always set the container height explicitly
-    <div style={{ height: "100vh", width: "100%" }}>
-      {position?.latitude && position?.longitude && (
+  if (position?.latitude && position?.longitude) {
+    return (
+      <div
+        style={{
+          width: "48vw",
+          height: "100vh",
+        }}
+      >
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyACHkOHi-pNVRYF8dRvuvnR-Cl28TgBYL0" }}
+          bootstrapURLKeys={{ key: "api key here" }}
           defaultCenter={{
             lat: position?.latitude ? position.latitude : 59.95,
             lng: position?.longitude ? position.longitude : 30.33,
@@ -46,9 +50,10 @@ const SimpleMap = ({ center = { lat: 59.95, lng: 30.33 }, zoom = 11 }) => {
             text="My Marker"
           />
         </GoogleMapReact>
-      )}
-    </div>
-  );
+      </div>
+    );
+  }
+  return <div></div>;
 };
 
 export default SimpleMap;

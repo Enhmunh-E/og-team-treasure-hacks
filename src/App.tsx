@@ -4,7 +4,7 @@ import SimpleMap from "./map/Map";
 
 const App = () => {
   return (
-    <div className="center" id="homeContainer">
+    <div className="center" id="baseContainer">
       <div id="homeMiddle" className="center col">
         <p>
           Please <b id="allowlocationtext">Allow Location</b> In Order To Use
