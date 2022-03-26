@@ -10,7 +10,7 @@ type PropsType = {
 };
 const Card = (props: PropsType) => {
   return (
-    <div className="card column">
+    <div className="card">
       <img src={props.imageUrl} className="card-image" />
       <section className="column details">
         <div className="row space-between mbottom hstart">
@@ -50,7 +50,7 @@ const Card = (props: PropsType) => {
           </svg>
           <h3>{props.schedule}</h3>
         </div>
-        <div className="row hcenter mbottom">
+        <div className="row hcenter mbottom ">
           <svg
             className="mright"
             width="16"

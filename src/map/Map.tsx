@@ -1,6 +1,14 @@
-import React, { useContext } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import GoogleMapReact from "google-map-react";
 import { Context } from "../provider";
+import axios from "axios";
+import { resourceLimits } from "worker_threads";
 
 type textType = {
   text: string;
@@ -27,6 +35,22 @@ const AnyReactComponent = ({ text }: textType) => (
 
 const SimpleMap = ({ center = { lat: 59.95, lng: 30.33 }, zoom = 11 }) => {
   const { position } = useContext(Context);
+  const data = useMemo(async () => {
+    let axiosData = await axios
+      .get(
+        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${
+          position?.latitude + "," + position?.longitude
+        }&radius=1500&type=amusement_park|park&key=apiKeyPapa`,
+        {
+          headers: {},
+        }
+      )
+      .then((res) => {
+        console.log(res.data.results);
+        return res.data.results;
+      });
+    return axiosData;
+  }, [position]);
   console.log(position);
   if (position?.latitude && position?.longitude) {
     return (
@@ -37,7 +61,7 @@ const SimpleMap = ({ center = { lat: 59.95, lng: 30.33 }, zoom = 11 }) => {
         }}
       >
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "api key here" }}
+          bootstrapURLKeys={{ key: "apiKeyPapa" }}
           defaultCenter={{
             lat: position?.latitude ? position.latitude : 59.95,
             lng: position?.longitude ? position.longitude : 30.33,
