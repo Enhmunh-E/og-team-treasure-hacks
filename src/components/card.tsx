@@ -10,10 +10,10 @@ type PropsType = {
 };
 const Card = (props: PropsType) => {
   return (
-    <div className="card column">
+    <div className="card">
       <img src={props.imageUrl} className="card-image" />
       <section className="column details">
-        <div className="row space-between mbottom">
+        <div className="row space-between mbottom hstart">
           <h2>{props.name}</h2>
           <div className="row hcenter">
             <h2 className="mright">{props.rate.toFixed(1)}</h2>
@@ -31,7 +31,7 @@ const Card = (props: PropsType) => {
             </svg>
           </div>
         </div>
-        <div className="row hcenter">
+        <div className="row hcenter mbottom">
           <svg
             className="mright"
             width="18"
@@ -43,14 +43,14 @@ const Card = (props: PropsType) => {
             <path
               d="M9 4.55556V9L11.6667 11.6667M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z"
               stroke="#393939"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           <h3>{props.schedule}</h3>
         </div>
-        <div className="row hcenter">
+        <div className="row hcenter mbottom ">
           <svg
             className="mright"
             width="16"

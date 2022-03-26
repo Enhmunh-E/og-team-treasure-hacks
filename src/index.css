@@ -30,3 +30,7 @@ code {
   display: flex;
   flex-direction: column;
 }
+.between {
+  display: flex;
+  justify-content: space-between;
+}
