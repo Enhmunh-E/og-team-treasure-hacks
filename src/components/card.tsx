@@ -14,7 +14,7 @@ const Card = (props: PropsType) => {
       <img src={props.imageUrl} className="card-image" />
       <section className="column details">
         <div className="row space-between mbottom hstart">
-          <h2>{props.name}</h2>
+          <h2 className="name">{props.name}</h2>
           <div className="row hcenter">
             <h2 className="mright">{props.rate.toFixed(1)}</h2>
             <svg

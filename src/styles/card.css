@@ -25,13 +25,16 @@ h2 {
 }
 
 .card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 .card-image {
-  width: 100%;
+  width: 50%;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .space-between {
@@ -40,11 +43,13 @@ h2 {
 
 .details {
   background-color: white;
+  border-top: 1px solid #c4c4c4;
   border-right: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
-  border-left: 1px solid #c4c4c4;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 0px 8px 8px 0px;
+  white-space: nowrap;
   padding: 12px;
+  /* word-break: break-word; */
 }
 
 .hcenter {
@@ -65,9 +70,34 @@ h2 {
   align-items: start;
 }
 
+.name {
+  width: 40%;
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  white-space: normal;
+}
+
 @media screen and (min-width: 600px) {
+  .name {
+    position: static;
+    width: 100%;
+  }
+
   .card {
     flex-direction: column;
     width: 250px;
+  }
+
+  .details {
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    border-radius: 0px 0px 8px 8px;
+  }
+
+  .card-image {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
   }
 }
