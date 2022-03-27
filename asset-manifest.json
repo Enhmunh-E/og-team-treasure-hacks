@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/og-team-treasure-hacks/static/css/main.7908a9a7.css",
+    "main.js": "/og-team-treasure-hacks/static/js/main.b98eb13d.js",
+    "static/js/787.c5d46c3a.chunk.js": "/og-team-treasure-hacks/static/js/787.c5d46c3a.chunk.js",
+    "index.html": "/og-team-treasure-hacks/index.html",
+    "main.7908a9a7.css.map": "/og-team-treasure-hacks/static/css/main.7908a9a7.css.map",
+    "main.b98eb13d.js.map": "/og-team-treasure-hacks/static/js/main.b98eb13d.js.map",
+    "787.c5d46c3a.chunk.js.map": "/og-team-treasure-hacks/static/js/787.c5d46c3a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7908a9a7.css",
+    "static/js/main.b98eb13d.js"
+  ]
+}
